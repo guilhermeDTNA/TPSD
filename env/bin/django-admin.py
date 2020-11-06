@@ -1,4 +1,4 @@
-#!/media/alex/5A2C46AB2C4681CD/deploy/SD/env/bin/python3
+#!/home/guilherme/Documentos/TPSD/env/bin/python3
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
