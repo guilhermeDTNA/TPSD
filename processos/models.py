@@ -13,7 +13,7 @@ class Geral(models.Model):
     entrada = models.CharField(max_length=255, blank=True, null=True)
     titulo = models.CharField(max_length=255)
     idioma = models.CharField(max_length=255, blank=True, null=True)
-    descricao = models.CharField(max_length=255, blank=True, null=True)
+    descricao = models.CharField(max_length=500, blank=True, null=True)
     palavras_chaves = models.CharField(max_length=255, blank=True, null=True)
     cobertura = models.CharField(max_length=255, blank=True, null=True)
     estrutura = models.CharField(max_length=255, blank=True, null=True)
