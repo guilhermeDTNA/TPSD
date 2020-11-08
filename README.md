@@ -20,3 +20,5 @@ Como executar a API:
     * Acesse localhost:8000/objetos
         * Para visualizar os objetos de aprendizagem em formato JSON selecione a opção "json" através do botão "GET"
         
+
+O projeto também está disponível no GitHub por meio do endereço: https://github.com/Alexlr10/TPSD.
