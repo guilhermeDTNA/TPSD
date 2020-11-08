@@ -1,11 +1,11 @@
 from django.contrib import admin
 from django.urls import path, include
-from processos.views import ClienteViewSet, GeralViewSet
+from processos.views import GeralViewSet
 from rest_framework import routers
 
 
 router = routers.DefaultRouter()
-#router.register('clientes', ClienteViewSet)
+
 router.register('objetos', GeralViewSet)
 
 urlpatterns = [
