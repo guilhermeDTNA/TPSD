@@ -29,10 +29,8 @@ Como executar a interface para consulta:
         * npm install react-router-dom
         * npm install react-icons
         * npm install axios
-
     Excute o comando:
         * npm start
-
     Acesse localhost:8001
         
 
