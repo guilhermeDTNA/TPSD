@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import api from './api';
-import {FaArrowLeft, FaSpinner} from 'react-icons/fa';
+import {FaSpinner} from 'react-icons/fa';
 
 
 export default class Home extends Component{
@@ -28,7 +28,7 @@ export default class Home extends Component{
 			state.loading = true;
 			this.setState(state);
 
-			const resposta = await api.get(campo)
+			const resposta = await api.get(campo+'/')
 			//.then(function(response){
     //console.log(response.data); // ex.: { user: 'Your User'}
     console.log(resposta); // ex.: 200

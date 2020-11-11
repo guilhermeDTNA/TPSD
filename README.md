@@ -13,6 +13,7 @@ Como executar a API:
         * pip install djangorestframework
         * pip install markdown       # Markdown support for the browsable API.
         * pip install django-filter  # Filtering support
+        * pip install django-cors-headers
     * Execute o comando:
         * python manage.py migrate
     * Inicie o servidor
