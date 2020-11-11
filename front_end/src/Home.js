@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+import api from './api';
 import {FaArrowLeft, FaSpinner} from 'react-icons/fa';
 
 
@@ -28,13 +28,13 @@ export default class Home extends Component{
 			state.loading = true;
 			this.setState(state);
 
-			const resposta = await axios.get('https://api.github.com/users/' + campo)
-			.then(function(response){
-    console.log(response.data); // ex.: { user: 'Your User'}
-    console.log(response.status); // ex.: 200
+			const resposta = await api.get(campo)
+			//.then(function(response){
+    //console.log(response.data); // ex.: { user: 'Your User'}
+    console.log(resposta); // ex.: 200
     
 
-});			
+//});			
 
 		}
 		state.loading = false;
@@ -53,9 +53,9 @@ export default class Home extends Component{
 				<FaSpinner color="#FF0000" size={50} className="icon-spin" />
 				</div>	
 				);
-		}
-		else {
-			return (
+			}
+			else {
+				return (
 
 				<div className="container">
 
@@ -76,6 +76,6 @@ export default class Home extends Component{
 
 				</div>
 				);
+			}
 		}
 	}
-}
