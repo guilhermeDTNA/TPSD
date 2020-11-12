@@ -7,4 +7,4 @@ class GeralSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['catalogo', 'entrada',
                   'titulo', 'idioma', 'descricao',
                   'palavras_chaves', 'cobertura',
-                  'estrutura', 'nivel_agregacao']
+                  'estrutura', 'nivel_agregacao', 'data']
