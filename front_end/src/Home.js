@@ -43,15 +43,21 @@ export default class Home extends Component{
 			this.setState(state);
 
 
-			let url = 'titulo='+titulo+'&idioma='+idioma+'&descricao='+descricao+'&Palavras_chave='+palavras_chave+'&cobertura='+cobertura+'&estrutura='+estrutura+'&agregacao='+agregacao+'&formato='+formato+'&data='+data+'&tamanho='+tamanho;
+			let url = 'catalogo=&entrada=&'+'titulo='+titulo+'&idioma='+idioma+'&descricao='+descricao+'&palavras_chaves='+palavras_chave+'&cobertura='+cobertura+'&estrutura='+estrutura+'&nivel_agregacao='+agregacao+'&data='+data;
+
+			//Pra quando adicionar formato e tamanho:
+//			let url = 'catalogo=&entrada=&'+'titulo='+titulo+'&idioma='+idioma+'&descricao='+descricao+'&Palavras_chave='+palavras_chave+'&cobertura='+cobertura+'&estrutura='+estrutura+'&nivel_agregacao='+agregacao+'&formato='+formato+'&data='+data+'&tamanho='+tamanho;
+
 
 			//Retira acentos e letras maiúsculas
 			url = url.normalize("NFD");
 			url = url.toLowerCase();
 
-			console.log('URL: '+url);
+			//console.log(url);
 
-			const resposta = await api.get(url+'/')
+			//console.log('URL: '+url);
+
+			const resposta = await api.get(url);
 			//.then(function(response){
     //console.log(response.data); // ex.: { user: 'Your User'}
     console.log(resposta); // ex.: 200
