@@ -58,6 +58,8 @@ export default class Home extends Component{
 			//console.log('URL: '+url);
 
 			const resposta = await api.get(url);
+
+
 			//.then(function(response){
     //console.log(response.data); // ex.: { user: 'Your User'}
     console.log(resposta); // ex.: 200
