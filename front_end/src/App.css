@@ -45,7 +45,7 @@
 
 form#campo{
   width: 100%;
-  max-width: 680px;
+  max-width: 970px;
   height: 80%;
   margin: 30px auto 0;
   padding: 30px;
@@ -71,13 +71,13 @@ form#campo input{
 }
 
 form#campo button{
-  padding: 10px 20px;
   border-radius: 4px;
   background: #272727;
   color: #FFF;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
+  height: 40px;
 }
 
 form#campo a{

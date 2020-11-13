@@ -11,7 +11,6 @@ class Rotas extends Component {
 			<BrowserRouter>
 			 <Switch>
 			<Route exact path="/" component={Home} />
-			
 
 
 			<Route path="*" component={Nao_Encontrado} />

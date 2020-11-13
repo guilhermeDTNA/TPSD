@@ -8,6 +8,8 @@ export default class Home extends Component{
 	constructor(props) {
 		super(props);
 		this.state = {
+			catalogo: '',
+			entrada: '',
 			titulo: '',
 			idioma: '',
 			descricao: '',
@@ -27,6 +29,8 @@ export default class Home extends Component{
 	async buscar(event){
 		let state = this.state;
 		
+		let catalogo = this.state.catalogo;
+		let entrada = this.state.entrada;
 		let titulo = this.state.titulo;
 		let idioma = this.state.idioma;
 		let descricao = this.state.descricao;
@@ -43,7 +47,7 @@ export default class Home extends Component{
 			this.setState(state);
 
 
-			let url = 'catalogo=&entrada=&'+'titulo='+titulo+'&idioma='+idioma+'&descricao='+descricao+'&palavras_chaves='+palavras_chave+'&cobertura='+cobertura+'&estrutura='+estrutura+'&nivel_agregacao='+agregacao+'&data='+data;
+			let url = 'catalogo='+catalogo+'&entrada='+entrada+'&titulo='+titulo+'&idioma='+idioma+'&descricao='+descricao+'&palavras_chaves='+palavras_chave+'&cobertura='+cobertura+'&estrutura='+estrutura+'&nivel_agregacao='+agregacao+'&data='+data;
 
 			//Pra quando adicionar formato e tamanho:
 //			let url = 'catalogo=&entrada=&'+'titulo='+titulo+'&idioma='+idioma+'&descricao='+descricao+'&Palavras_chave='+palavras_chave+'&cobertura='+cobertura+'&estrutura='+estrutura+'&nivel_agregacao='+agregacao+'&formato='+formato+'&data='+data+'&tamanho='+tamanho;
@@ -60,10 +64,12 @@ export default class Home extends Component{
 			const resposta = await api.get(url);
 
 
-			//.then(function(response){
-    //console.log(response.data); // ex.: { user: 'Your User'}
     console.log(resposta); // ex.: 200
     
+    let pagina = window.open('http://localhost:8000/consulta_objetos?&format=json&'+url,"_blank"); // abre em nova janela
+
+    
+
 
 //});			
 
@@ -101,12 +107,18 @@ this.setState(state);
 				<div className="formulario">
 				
 				<div className="linha" >
-				<div className="coluna">Título: <input type="text" autoComplete="on" autoFocus value={this.state.titulo} onChange={(e) => this.setState({titulo: e.target.value})} placeholder="Ex: Teoria da Computação" /></div>
+				<div className="coluna">Catálogo: <input type="text" autoComplete="on" autoFocus value={this.state.catalogo} onChange={(e) => this.setState({catalogo: e.target.value})} placeholder="Ex: OBJ-1" /></div>
 
-				<div className="coluna">Idioma: <input type="text" autoComplete="on" autoFocus value={this.state.idioma} onChange={(e) => this.setState({idioma: e.target.value})} placeholder="Ex: Português" /></div>
+				<div className="coluna">Entrada: <input type="text" autoComplete="on" autoFocus value={this.state.entrada} onChange={(e) => this.setState({entrada: e.target.value})} placeholder="Ex: www.google.com" /></div>
+
+
+				<div className="coluna">Título: <input type="text" autoComplete="on" autoFocus value={this.state.titulo} onChange={(e) => this.setState({titulo: e.target.value})} placeholder="Ex: Teoria da Computação" /></div>
 				</div>
 
 				<div className="linha" >
+				<div className="coluna">Idioma: <input type="text" autoComplete="on" autoFocus value={this.state.idioma} onChange={(e) => this.setState({idioma: e.target.value})} placeholder="Ex: Português" /></div>
+				
+
 				<div className="coluna">Descrição: <input type="text" autoComplete="on" autoFocus value={this.state.descricao} onChange={(e) => this.setState({descricao: e.target.value})} placeholder="Ex: Artigo que introduz fundamentos" /></div>
 
 				<div className="coluna">Palavras-chave: <input type="text" autoComplete="on" autoFocus value={this.state.palavras_chave} onChange={(e) => this.setState({palavras_chave: e.target.value})} placeholder="Ex: Teoria da Computação, Inteligência Artificial" /></div>
@@ -116,15 +128,14 @@ this.setState(state);
 				<div className="coluna">Cobertura: <input type="text" autoComplete="on" autoFocus value={this.state.cobertura} onChange={(e) => this.setState({cobertura: e.target.value})} placeholder="Ex: Diamantina, 2020" /></div>
 
 				<div className="coluna">Estrutura: <input type="text" autoComplete="on" autoFocus value={this.state.estrutura} onChange={(e) => this.setState({estrutura: e.target.value})} placeholder="Atômico, coleção, rede, hierarquia ou linear" /></div>
-				</div>
 
-				<div className="linha" >
+				
 				<div className="coluna">Nível de agregação: <input type="number" autoComplete="on" autoFocus value={this.state.agregacao} onChange={(e) => this.setState({agregacao: e.target.value})} placeholder="1, 2, 3 ou 4" /></div>
-
-				<div className="coluna">Formato: <input type="text" autoComplete="on" autoFocus value={this.state.formato} onChange={(e) => this.setState({formato: e.target.value})} placeholder="Ex: PDF, JPG, XML" /></div>
 				</div>
 
 				<div className="linha" >
+				<div className="coluna">Formato: <input type="text" autoComplete="on" autoFocus value={this.state.formato} onChange={(e) => this.setState({formato: e.target.value})} placeholder="Ex: PDF, JPG, XML" /></div>
+
 				<div className="coluna">Data: <input type="date" autoComplete="on" autoFocus value={this.state.data} onChange={(e) => this.setState({data: e.target.value})} /></div>
 
 				<div className="coluna">Tamanho (bytes): <input type="number" autoComplete="on" autoFocus value={this.state.tamanho} onChange={(e) => this.setState({tamanho: e.target.value})} placeholder="Ex: 1024" /></div>
