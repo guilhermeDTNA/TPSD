@@ -1,18 +1,20 @@
-.container{
+.container-1{
+  background-color: #F0F8FF;
   display: flex;
-  width: 100%;
-  height: 100vh;
   flex-direction: column;
   justify-content: center;
-  background-color: #F0F8FF;
-  /*position: fixed; top: 0; left: 0;*/
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
 }
 
 .topo{
   flex: 1;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .titulo{
@@ -20,7 +22,7 @@
   text-align: center;
   color: blue;
   font-weight: bold;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .corpo{
@@ -43,27 +45,28 @@
   margin-top: 50px;
 }
 
+.coluna {
+  padding:5px;
+}
+
 form#campo{
-  width: 100%;
-  max-width: 970px;
-  height: 80%;
+  width: 75%;
   margin: 30px auto 0;
   padding: 30px;
   background: #FFF;
   border: 1px solid #DDD;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 form#campo input{
   margin-bottom: 15px;
-  height: 40px;
+  height: 50px;
   border-radius: 4px;
   border: 1px 20px;
   font-size: 0 20px;
-  font-size: 14px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,124 +90,173 @@ form#campo a{
   font-size: 10px;
 }
 
-.submit{
-    justify-content: center;
-}
-
-.linha{
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-}
-
-.coluna{
-  flex: 1;
-  justify-content: center;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
 
 /*Para o ícone de carregar*/
 .icon-spin {
   -webkit-animation: icon-spin 2s infinite linear;
-          animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
 }
 
 @-webkit-keyframes icon-spin {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 
 @keyframes icon-spin {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 
-@media (max-width: 540px) and (orientation: portrait) { 
+@media (max-width: 650px) and (orientation: portrait) { 
 
 
-.container{
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #F0F8FF;
-  /*position: fixed; top: 0; left: 0;*/
+  .container-1{
+    background-color: #F0F8FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .topo{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom:-50px;
+    position: relative;
+  }
+
+  .titulo{
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+  }
+
+  .corpo{
+  }
+
+  .coluna {
+    padding:5px;
+  }
+
+  form#campo{
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    padding: auto;
+    background: #FFF;
+    border: 1px solid #DDD;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  form#campo input{
+
+    border-radius: 4px;
+    border: 1px 10px;
+
+    justify-content: center;
+
+  }
+
+  form#campo button{
+    border-radius: 4px;
+    background: #272727;
+    color: #FFF;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+
+  form#campo a{
+    text-align: center;
+    text-decoration: none;
+    color: #272727;
+  }
+
+
+
 }
 
-.corpo{
-  height: 90%;
-}
 
-.topo{
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
+@media (max-width: 750px) and (orientation: landscape) { 
 
-.titulo{
-  font-size: 30px;
-  text-align: center;
-  color: blue;
-  font-weight: bold;
-  width: 100%;
-}
 
-form#campo{
-  width: 90%;
-  max-width: 680px;
-  height: 80%;
-  margin: 5px auto 0;
-  padding: 10px;
-  background: #FFF;
-  border: 1px solid #DDD;
+  .container-1{
+    background-color: #F0F8FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .topo{
+    height: 20%;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
 
-form#campo input{
-  margin-bottom: 15px;
-  height: 20px;
-  border-radius: 4px;
-  border: 1px 20px;
-  font-size: 0 20px;
-  font-size: 14px;
-  justify-content: center;
-  width: 140px;
-}
+  .titulo{
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+  }
 
-form#campo button{
-  padding: 5px 10px;
-  border-radius: 4px;
-  background: #272727;
-  color: #FFF;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-}
+  .corpo{
+  }
 
-form#campo a{
-  text-align: center;
-  text-decoration: none;
-  color: #272727;
-  font-size: 10px;
-}
+  .coluna {
+    padding:5px;
+  }
 
+  form#campo{
+    width: 100%;
+    height: 75%;
+    margin: auto;
+    padding: auto;
+    background: #FFF;
+    border: 1px solid #DDD;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  form#campo input{
+
+    border-radius: 4px;
+    border: 1px 10px;
+
+    justify-content: center;
+
+  }
+
+  form#campo button{
+    border-radius: 4px;
+    background: #272727;
+    color: #FFF;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+
+  form#campo a{
+    text-align: center;
+    text-decoration: none;
+    color: #272727;
+  }
 }

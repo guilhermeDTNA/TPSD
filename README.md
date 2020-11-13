@@ -30,6 +30,7 @@ Como executar a interface para consulta:
         * npm install react-router-dom
         * npm install react-icons
         * npm install axios
+        * npm install react-bootstrap bootstrap
     Excute o comando:
         * npm start
     Acesse localhost:8001
