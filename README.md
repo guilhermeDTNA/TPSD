@@ -9,11 +9,7 @@ Como executar a API:
     * Ative a virtual env
         * Ativando em ambiente Unix: source env/bin/activate
     * Instale os pacotes:
-        * pip install django
-        * pip install djangorestframework
-        * pip install markdown       # Markdown support for the browsable API.
-        * pip install django-filter  # Filtering support
-        * pip install django-cors-headers
+        * pip install -r requirements.txt
     * Execute o comando:
         * python manage.py migrate
     * Inicie o servidor

@@ -33,15 +33,20 @@ def consulta_api(request):
     if request.method == 'GET':
         vetor_parametros = []
         print(request.GET)
-
+        cont = 0
         if request.query_params: #Se contem os parametros na URL
             for i in request.GET.values():
                 if i == 'json':
                     continue
-                vetor_parametros.append(i) #adicionar os valores dos parametros em um vetor
-
+                if i != '':
+                    vetor_parametros.append(i) #adicionar os valores dos parametros em um vetor
+                else:
+                    vetor_parametros.append(i)
+                print(str(i)+'  '+str(cont))
+                cont+=1
             try:
-                if vetor_parametros[9] == '': #Se a data não foi informada
+                print(vetor_parametros[10]+'   <<<')
+                if vetor_parametros[10] == '': #Se a data não foi informada
                     members = Geral.objects.filter(catalogo__contains=vetor_parametros[0],
                                                    entrada__contains=vetor_parametros[1],
                                                    titulo__contains=vetor_parametros[2],
@@ -50,7 +55,9 @@ def consulta_api(request):
                                                    palavras_chaves__contains=vetor_parametros[5],
                                                    cobertura__contains=vetor_parametros[6],
                                                    estrutura__contains=vetor_parametros[7],
-                                                   nivel_agregacao__contains=vetor_parametros[8],)
+                                                   nivel_agregacao__contains=vetor_parametros[8],
+                                                   formato__contains = vetor_parametros[9],
+                                                   tamanho__contains = vetor_parametros[10],)
                     serializer = GeralSerializer(members, many=True)
                     return Response(serializer.data)
                 else:
@@ -63,12 +70,14 @@ def consulta_api(request):
                                                    cobertura__contains=vetor_parametros[6],
                                                    estrutura__contains=vetor_parametros[7],
                                                    nivel_agregacao__contains=vetor_parametros[8],
-                                                   data=vetor_parametros[9])
+                                                   formato__contains=vetor_parametros[9],
+                                                   data=vetor_parametros[10],
+                                                   tamanho__contains=vetor_parametros[11],)
                     serializer = GeralSerializer(members, many=True)
                     return Response(serializer.data)
             except:
                 return HttpResponse('<p>Os parametros de pesquisa foram passados errados, utilize a estrutura:</p>'
-                                    '<p>localhost:8000/consulta_objetos?&format=json&catalogo=&entrada=&titulo=&idioma=&descricao=&palavras_chaves=&cobertura=&estrutura=&nivel_agregacao=&data=</p>')
+                                    '<p>http://localhost:8000/consulta_objetos?&format=json&catalogo=&entrada=&titulo=&idioma=&descricao=&palavras_chaves=&cobertura=&estrutura=&nivel_agregacao=&formato=&data=&tamanho=</p>')
         else: #Retornar todos os objetos
             members = Geral.objects.all()
             serializer = GeralSerializer(members, many=True)
