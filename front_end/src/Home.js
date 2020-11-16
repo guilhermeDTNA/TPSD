@@ -43,30 +43,22 @@ export default class Home extends Component{
 		let data = this.state.data;
 		let tamanho = this.state.tamanho;
 
-			//console.log(campo);
-			state.loading = true;
-			this.setState(state);
+		state.loading = true;
+		this.setState(state);
 
 
-			let url = 'catalogo='+catalogo+'&entrada='+entrada+'&titulo='+titulo+'&idioma='+idioma+'&descricao='+descricao+'&palavras_chaves='+palavras_chave+'&cobertura='+cobertura+'&estrutura='+estrutura+'&nivel_agregacao='+agregacao+'&data='+data;
-
-			//Pra quando adicionar formato e tamanho:
-//			let url = 'catalogo=&entrada=&'+'titulo='+titulo+'&idioma='+idioma+'&descricao='+descricao+'&Palavras_chave='+palavras_chave+'&cobertura='+cobertura+'&estrutura='+estrutura+'&nivel_agregacao='+agregacao+'&formato='+formato+'&data='+data+'&tamanho='+tamanho;
-
+		let url = 'catalogo='+catalogo+'&entrada='+entrada+'&titulo='+titulo+'&idioma='+idioma+'&descricao='+descricao+'&palavras_chaves='+palavras_chave+'&cobertura='+cobertura+'&estrutura='+estrutura+'&nivel_agregacao='+agregacao+'&formato='+formato+'&data='+data+'&tamanho='+tamanho;
 
 			//Retira acentos e letras maiúsculas
 			url = url.normalize("NFD");
 			url = url.toLowerCase();
 
-			//console.log(url);
-
-			//console.log('URL: '+url);
 
 			const resposta = await api.get(url);
 
 
-    console.log(resposta.data.length); // ex.: 200
-    
+
+    //Verifica tamanho do array de objetos
     if(resposta.data.length === 0){
     	alert('Objeto não encontrado');
     }
@@ -80,7 +72,22 @@ export default class Home extends Component{
 
 
 state.loading = false;
-state.campo = '';
+
+
+state.catalogo = '';
+state.entrada = '';
+state.titulo = '';
+state.idioma = '';
+state.descricao = '';
+state.palavras_chave = '';
+state.cobertura = '';
+state.estrutura = '';
+state.agregacao = '';
+state.formato = '';
+state.data = '';
+state.tamanho = '';
+
+
 this.setState(state);
 		//Não atualiza a página
 		//event.preventDefault();
