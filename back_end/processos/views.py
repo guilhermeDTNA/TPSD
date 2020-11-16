@@ -45,8 +45,9 @@ def consulta_api(request):
                 print(str(i)+'  '+str(cont))
                 cont+=1
             try:
-                print(vetor_parametros[10]+'   <<<')
+
                 if vetor_parametros[10] == '': #Se a data não foi informada
+                    print(vetor_parametros[10] + '   <<<')
                     members = Geral.objects.filter(catalogo__contains=vetor_parametros[0],
                                                    entrada__contains=vetor_parametros[1],
                                                    titulo__contains=vetor_parametros[2],
@@ -57,7 +58,7 @@ def consulta_api(request):
                                                    estrutura__contains=vetor_parametros[7],
                                                    nivel_agregacao__contains=vetor_parametros[8],
                                                    formato__contains = vetor_parametros[9],
-                                                   tamanho__contains = vetor_parametros[10],)
+                                                   tamanho__contains = vetor_parametros[11],)
                     serializer = GeralSerializer(members, many=True)
                     return Response(serializer.data)
                 else:
