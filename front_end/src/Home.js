@@ -50,7 +50,7 @@ export default class Home extends Component{
 		let url = 'catalogo='+catalogo+'&entrada='+entrada+'&titulo='+titulo+'&idioma='+idioma+'&descricao='+descricao+'&palavras_chaves='+palavras_chave+'&cobertura='+cobertura+'&estrutura='+estrutura+'&nivel_agregacao='+agregacao+'&formato='+formato+'&data='+data+'&tamanho='+tamanho;
 
 			//Retira acentos e letras maiúsculas
-			url = url.normalize("NFD");
+			//url = url.normalize("NFD");
 			url = url.toLowerCase();
 
 
@@ -60,7 +60,7 @@ export default class Home extends Component{
 
     //Verifica tamanho do array de objetos
     if(resposta.data.length === 0){
-    	alert('Objeto não encontrado');
+    	alert('Sua pesquisa não retornou resultado!');
     }
     else{
     let pagina = window.open('http://localhost:8000/consulta_objetos?&format=json&'+url,"_blank"); // abre em nova janela
