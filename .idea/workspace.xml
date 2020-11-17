@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5312bd80-7e9b-44b8-9c38-df0411444102" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_end/legacy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/legacy/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_end/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="5312bd80-7e9b-44b8-9c38-df0411444102" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +66,7 @@
       <workItem from="1604971010734" duration="46000" />
       <workItem from="1605049840782" duration="1199000" />
       <workItem from="1605561157331" duration="3851000" />
-      <workItem from="1605574185667" duration="3171000" />
+      <workItem from="1605574185667" duration="3477000" />
     </task>
     <servers />
   </component>
