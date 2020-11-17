@@ -1,5 +1,5 @@
 back_end/.idea
 back_end/env
-back_end/db.sqlite3
+db.sqlite3
 front_end/node_modules
 

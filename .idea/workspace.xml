@@ -19,7 +19,40 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5312bd80-7e9b-44b8-9c38-df0411444102" name="Default Changelist" comment="" />
+    <list default="true" id="5312bd80-7e9b-44b8-9c38-df0411444102" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/legacy/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/legacy/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/legacy/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/legacy/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/0002_geral.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/0003_auto_20201107_0033.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/0004_geral_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/0005_auto_20201114_0028.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/0006_auto_20201114_0108.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/0007_auto_20201114_0113.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/0008_auto_20201114_0114.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/0009_auto_20201114_0115.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/0010_auto_20201114_0118.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/0011_auto_20201114_0133.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/0012_auto_20201114_0139.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/templates/testetemplate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/processos/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +100,7 @@
       <workItem from="1604971010734" duration="46000" />
       <workItem from="1605049840782" duration="1199000" />
       <workItem from="1605561157331" duration="3851000" />
-      <workItem from="1605574185667" duration="4288000" />
+      <workItem from="1605574185667" duration="4999000" />
     </task>
     <servers />
   </component>
