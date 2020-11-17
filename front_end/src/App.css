@@ -1,0 +1,262 @@
+.container-1{
+  background-color: #F0F8FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+}
+
+.topo{
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.titulo{
+  font-size: 40px;
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.corpo{
+  flex: 5;
+}
+
+.conteudo-404{
+  text-align: center; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #F0F8FF;
+  position: fixed; top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.img{
+  width:300px;
+  height: 300px;
+  margin-top: 50px;
+}
+
+.coluna {
+  padding:5px;
+}
+
+form#campo{
+  width: 75%;
+  margin: 30px auto 0;
+  padding: 30px;
+  background: #FFF;
+  border: 1px solid #DDD;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form#campo input{
+  margin-bottom: 15px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px 20px;
+  font-size: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+}
+
+form#campo button{
+  border-radius: 4px;
+  background: #272727;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 40px;
+}
+
+form#campo a{
+  text-align: center;
+  text-decoration: none;
+  color: #272727;
+  font-size: 10px;
+}
+
+
+/*Para o ícone de carregar*/
+.icon-spin {
+  -webkit-animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
+}
+
+@-webkit-keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@media (max-width: 650px) and (orientation: portrait) { 
+
+
+  .container-1{
+    background-color: #F0F8FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .topo{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom:-50px;
+    position: relative;
+  }
+
+  .titulo{
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+  }
+
+  .corpo{
+  }
+
+  .coluna {
+    padding:5px;
+  }
+
+  form#campo{
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    padding: auto;
+    background: #FFF;
+    border: 1px solid #DDD;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  form#campo input{
+
+    border-radius: 4px;
+    border: 1px 10px;
+
+    justify-content: center;
+
+  }
+
+  form#campo button{
+    border-radius: 4px;
+    background: #272727;
+    color: #FFF;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+
+  form#campo a{
+    text-align: center;
+    text-decoration: none;
+    color: #272727;
+  }
+
+
+
+}
+
+
+@media (max-width: 750px) and (orientation: landscape) { 
+
+
+  .container-1{
+    background-color: #F0F8FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .topo{
+    height: 20%;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .titulo{
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+  }
+
+  .corpo{
+  }
+
+  .coluna {
+    padding:5px;
+  }
+
+  form#campo{
+    width: 100%;
+    height: 75%;
+    margin: auto;
+    padding: auto;
+    background: #FFF;
+    border: 1px solid #DDD;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  form#campo input{
+
+    border-radius: 4px;
+    border: 1px 10px;
+
+    justify-content: center;
+
+  }
+
+  form#campo button{
+    border-radius: 4px;
+    background: #272727;
+    color: #FFF;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+
+  form#campo a{
+    text-align: center;
+    text-decoration: none;
+    color: #272727;
+  }
+}

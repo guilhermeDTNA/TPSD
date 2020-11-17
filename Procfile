@@ -1,1 +1,1 @@
-web: gunicorn legacy.wsgi --log-file -
+aquweb: gunicorn legacy.wsgi --log-file -
