@@ -1,5 +1,5 @@
 .idea
 env
-db.sqlite3
+
 front_end/node_modules
 
