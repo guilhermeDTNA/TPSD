@@ -5,8 +5,11 @@ Grupo: Alex Lopes, Gabriel Duarte, Guilherme Rocha e Luiz Araújo.
 Como executar a API:
 
 * Instale alguma versão do Python (3.5, 3.6, 3.7, 3.8, 3.9)
+* Para a instalação dos pacotes recomendamos a utilização do comando "sudo", para que o usuário tenha as permissões necessárias para tal
 * Navegue até a pasta back_end
-    * Ative a virtual env
+    * Instale o ambiente virtual env
+        * apt-get install python3.6-venv
+    * Ative-o
         * Ativando em ambiente Unix: source env/bin/activate
     * Instale os pacotes:
         * pip install django
@@ -33,6 +36,7 @@ Como executar a interface para consulta:
         * npm install react-bootstrap bootstrap
     Excute o comando:
         * npm start
+    
     Acesse localhost:8001
         
 
