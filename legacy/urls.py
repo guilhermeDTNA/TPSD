@@ -1,12 +1,15 @@
 from django.contrib import admin
 from django.urls import path, include
-from processos.views import GeralViewSet, testeview, consulta_api
+from processos.views import *
 from rest_framework import routers
 
 
 router = routers.DefaultRouter()
 
 router.register('objetos', GeralViewSet)
+router.register('clientes', ClienteViewSet)
+router.register('servicos', ServicoViewSet)
+router.register('projeto', ProjetoViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

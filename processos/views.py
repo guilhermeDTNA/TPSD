@@ -1,8 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Geral
-from .serializers import GeralSerializer
+from .models import *
+from .serializers import *
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -102,3 +102,19 @@ def testeview(request):
 
 
     return render(request,'testetemplate.html')
+
+
+class ClienteViewSet(viewsets.ModelViewSet):
+    queryset = Cliente.objects.all()
+
+    serializer_class = ClienteSerializer
+
+class ServicoViewSet(viewsets.ModelViewSet):
+    queryset = Servico.objects.all()
+
+    serializer_class = ServicoSerializer
+
+class ProjetoViewSet(viewsets.ModelViewSet):
+    queryset = Projeto.objects.all()
+
+    serializer_class = ProjetoSerializer
