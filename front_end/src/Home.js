@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import api from './api';
 import {FaSpinner} from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
 
 
 export default class Home extends Component{
@@ -25,6 +26,8 @@ export default class Home extends Component{
 		}
 
 		this.buscar = this.buscar.bind(this);
+		this.alteraAgregacao = this.alteraAgregacao.bind(this);
+		this.alteraEstrutura = this.alteraEstrutura.bind(this);
 	}
 
 	async buscar(event){
@@ -63,9 +66,9 @@ export default class Home extends Component{
     	alert('Sua pesquisa não retornou resultado!');
     }
     else{
+    	//alert(agregacao);
     let pagina = window.open('http://localhost:8000/consulta_objetos?&format=json&'+url,"_blank"); // abre em nova janela
 }
-
 
 
 //});			
@@ -92,6 +95,30 @@ this.setState(state);
 		//Não atualiza a página
 		//event.preventDefault();
 	}
+
+	alteraAgregacao(event) {
+		
+		//if(event.target.value==='2' || event.target.value==='3' || event.target.value==='4'){
+			this.setState({agregacao: event.target.value});
+		//} else {
+		//	this.setState({agregacao: '1'});
+		//}
+	}
+
+	alteraEstrutura(event) {
+		
+		//if(event.target.value==='Coleção' || event.target.value==='Rede' || event.target.value==='Hierarquia' || event.target.value==='Linear'){
+			this.setState({estrutura: event.target.value});
+		//} else {
+		//	this.setState({estrutura: 'Atômico'});
+		//}
+	}
+	
+
+
+	//<input type="number" autoComplete="on" autoFocus value={this.state.agregacao} onChange={(e) => this.setState({agregacao: e.target.value})} placeholder="1, 2, 3 ou 4" /></td>
+	//<input type="text" autoComplete="on" autoFocus value={this.state.estrutura} onChange={(e) => this.setState({estrutura: e.target.value})} placeholder="Atômico, coleção, rede, hierarquia ou linear" /></td>
+
 
 	render(){
 		if(this.state.loading){
@@ -138,8 +165,32 @@ this.setState(state);
 				<tr>
 
 				<td className="coluna">Cobertura: <input type="text" autoComplete="on" autoFocus value={this.state.cobertura} onChange={(e) => this.setState({cobertura: e.target.value})} placeholder="Ex: Diamantina, 2020" /></td>
-				<td className="coluna">Estrutura: <input type="text" autoComplete="on" autoFocus value={this.state.estrutura} onChange={(e) => this.setState({estrutura: e.target.value})} placeholder="Atômico, coleção, rede, hierarquia ou linear" /></td>
-				<td className="coluna">Nível de agregação: <input type="number" autoComplete="on" autoFocus value={this.state.agregacao} onChange={(e) => this.setState({agregacao: e.target.value})} placeholder="1, 2, 3 ou 4" /></td>
+				<td className="coluna">Estrutura: 
+
+				<p align="center" >
+				<select className="select" onChange={this.alteraEstrutura}>
+				<option>Selecionar</option>
+				<option value='Atômico'>Atômico</option>
+				<option value='Coleção'>Coleção</option>
+				<option value='Rede'>Rede</option>
+				<option value='Hierarquia'>Hierarquia</option>
+				<option value='Linear'>Linear</option>
+				</select>
+				</p>
+				</td>
+
+				<td className="coluna">Nível de agregação: 
+
+				<p align="center" >
+				<select className="select" onChange={this.alteraAgregacao}>
+				<option>Selecionar</option>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				</select>
+				</p>
+				</td>		
 
 				</tr>
 
