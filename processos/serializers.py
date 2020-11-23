@@ -135,8 +135,8 @@ class TecnicoSerializer(serializers.ModelSerializer):
 
 class ApiOASerializer(serializers.ModelSerializer):
     Geral = GeralSerializer()
-    Ciclo_De_Vida = Ciclo_De_VidaSerializer
-    Tecnico = TecnicoSerializer
+    Ciclo_De_Vida = Ciclo_De_VidaSerializer()
+    Tecnico = TecnicoSerializer()
     class Meta:
         model = ApiOA
         fields ='__all__'
