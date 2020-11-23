@@ -111,9 +111,9 @@ class Estrutura(models.Model):
       return self.estrutura
 
 class Agregacao (models.Model):
-    agregacao = models.CharField(max_length=255, blank=True, null=True, default='nulo')
+    agregacao = models.IntegerField(blank=True, null=True, default='nulo')
     def __str__(self):
-      return self.agregacao
+      return str(self.agregacao)
 
 class Geral(models.Model):
      Titulo = models.ForeignKey(Titulo, on_delete=models.CASCADE, related_name='Titulo')

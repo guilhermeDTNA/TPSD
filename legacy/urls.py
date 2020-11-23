@@ -38,7 +38,7 @@ router.register('ApiOA',ApiOAViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('teste', testeview),
-#    path('consulta_objetos', consulta_api),
+    path('consulta_objetos', consulta_api),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls'))
 ]
