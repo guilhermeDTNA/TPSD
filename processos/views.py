@@ -50,15 +50,15 @@ def consulta_api(request):
                     print(vetor_parametros[10] + '   <<<')
                     members = ApiOA.objects.filter(Geral__Entrada_do_catalogo__catalogo__catalogo__contains =  vetor_parametros[0],
                                                    Geral__Entrada_do_catalogo__entrada__entrada__contains=vetor_parametros[1],
-                                                   titulo__contains=vetor_parametros[2],
-                                                   idioma__contains= vetor_parametros[3],
-                                                   descricao__contains=vetor_parametros[4],
-                                                   palavras_chaves__contains=vetor_parametros[5],
-                                                   cobertura__contains=vetor_parametros[6],
-                                                   estrutura__contains=vetor_parametros[7],
-                                                   nivel_agregacao__contains=vetor_parametros[8],
-                                                   formato__contains = vetor_parametros[9],
-                                                   tamanho__contains = vetor_parametros[11],)
+                                                   Geral__Titulo__titulo__contains=vetor_parametros[2],
+                                                   Geral__Idioma__idioma__contains= vetor_parametros[3],
+                                                   Geral__Descricao__descricao__contains=vetor_parametros[4],
+                                                   Geral__Palavras_chave__palavras_chaves__contains=vetor_parametros[5],
+                                                   Geral__Cobertura__cobertura__contains=vetor_parametros[6],
+                                                   Geral__Estrutura__estrutura__contains=vetor_parametros[7],
+                                                   Geral__Agregacao__agregacao__contains=vetor_parametros[8],
+                                                   Tecnico__formato__formato__contains = vetor_parametros[9],
+                                                   Tecnico__tamanho__tamanho__contains = vetor_parametros[11],)
 
                     serializer = ApiOASerializer(members, many=True)
 
@@ -67,17 +67,17 @@ def consulta_api(request):
 
                     return response
                 else:
-                    members = ApiOA.objects.filter(Geral__Entrada_do_catalogo__catalogo__catalogo__contains=vetor_parametros[0],
-                                                    Geral__Entrada_do_catalogo__entrada__entrada__contains=vetor_parametros[1],
-                                                    titulo__contains=vetor_parametros[2],
-                                                    idioma__contains=vetor_parametros[3],
-                                                    descricao__contains=vetor_parametros[4],
-                                                    palavras_chaves__contains=vetor_parametros[5],
-                                                    cobertura__contains=vetor_parametros[6],
-                                                    estrutura__contains=vetor_parametros[7],
-                                                    nivel_agregacao__contains=vetor_parametros[8],
-                                                    formato__contains=vetor_parametros[9],
-                                                    tamanho__contains=vetor_parametros[11], )
+                    members = ApiOA.objects.filter(Geral__Entrada_do_catalogo__catalogo__catalogo__contains =  vetor_parametros[0],
+                                                   Geral__Entrada_do_catalogo__entrada__entrada__contains=vetor_parametros[1],
+                                                   Geral__Titulo__titulo__contains=vetor_parametros[2],
+                                                   Geral__Idioma__idioma__contains= vetor_parametros[3],
+                                                   Geral__Descricao__descricao__contains=vetor_parametros[4],
+                                                   Geral__Palavras_chave__palavras_chaves__contains=vetor_parametros[5],
+                                                   Geral__Cobertura__cobertura__contains=vetor_parametros[6],
+                                                   Geral__Estrutura__estrutura__contains=vetor_parametros[7],
+                                                   Geral__Agregacao__agregacao__contains=vetor_parametros[8],
+                                                   Tecnico__formato__formato__contains = vetor_parametros[9],
+                                                   Tecnico__tamanho__tamanho__contains = vetor_parametros[11],)
                     serializer = ApiOASerializer(members, many=True)
                     response = Response(serializer.data, content_type='application/json')
                     response['Content-Disposition'] = 'attachment; filename=export.json'
