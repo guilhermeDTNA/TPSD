@@ -11,7 +11,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY package-lock.json ./
 
-RUN npm install react-router-dom && npm install react-icons && npm install axios &&  npm install react-bootstrap
+RUN npm cache clean --force && npm install react-router-dom && npm install react-icons && npm install axios &&  npm install react-bootstrap
 
 # add app
 COPY . ./
