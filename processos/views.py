@@ -63,9 +63,9 @@ def consulta_api(request):
                     serializer = ApiOASerializer(members, many=True)
 
                     response = Response(serializer.data, content_type='application/json')
-                    response['Content-Disposition'] = 'attachment; filename=export.json'
+                    #response['Content-Disposition'] = 'attachment; filename=export.json'
 
-                    return response
+                    return Response(serializer.data)
                 else:
                     members = ApiOA.objects.filter(Geral__Entrada_do_catalogo__catalogo__catalogo__contains =  vetor_parametros[0],
                                                    Geral__Entrada_do_catalogo__entrada__entrada__contains=vetor_parametros[1],
@@ -80,9 +80,9 @@ def consulta_api(request):
                                                    Tecnico__tamanho__tamanho__contains = vetor_parametros[11],)
                     serializer = ApiOASerializer(members, many=True)
                     response = Response(serializer.data, content_type='application/json')
-                    response['Content-Disposition'] = 'attachment; filename=export.json'
+                    #response['Content-Disposition'] = 'attachment; filename=export.json'
 
-                    return response
+                    return Response(serializer.data)
             except:
                 return HttpResponse('<p>Os parametros de pesquisa foram passados errados, utilize a estrutura:</p>'
                                     '<p>http://localhost:8000/consulta_objetos?&format=json&catalogo=&entrada=&titulo=&idioma=&descricao=&palavras_chaves=&cobertura=&estrutura=&nivel_agregacao=&formato=&data=&tamanho=</p>')
