@@ -10,7 +10,6 @@ services:
       - "8000:8000"
 
   react:
-    container_name: front_end
     build:
       context: ./front_end
       dockerfile: Dockerfile
