@@ -90,10 +90,6 @@ form#campo a{
   font-size: 10px;
 }
 
-.select{
-  padding-top: 20px;
-}
-
 
 /*Para o ícone de carregar*/
 .icon-spin {
@@ -191,9 +187,6 @@ form#campo a{
     color: #272727;
   }
 
-  .agreg{
-    
-  }
 
 
 }

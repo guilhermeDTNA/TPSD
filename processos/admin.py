@@ -1,11 +1,6 @@
 from django.contrib import admin
 from .models import *
 
-
-admin.site.register(Cliente)
-admin.site.register(Servico)
-admin.site.register(Projeto)
-
 admin.site.register(Titulo)
 admin.site.register(Entrada_do_catalogo)
 admin.site.register(Catalogo)

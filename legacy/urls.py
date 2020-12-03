@@ -6,11 +6,7 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 
-#router.register('objetos', GeralViewSet)
-router.register('clientes', ClienteViewSet)
-router.register('servicos', ServicoViewSet)
-router.register('projeto', ProjetoViewSet)
-
+'''
 router.register('titulo',TituloViewSet)
 router.register('entrada_do_catalogo',Entrada_do_CatalogoViewSet)
 router.register('entrada',EntradaViewSet)
@@ -29,15 +25,12 @@ router.register('ciclo_de_vida',Ciclo_De_VidaViewSet)
 router.register('formato',FormatoViewSet)
 router.register('tamanho',TamanhoViewSet)
 router.register('tecnico',TecnicoViewSet)
+'''
 
 router.register('ApiOA',ApiOAViewSet)
 
-
-#router.register('geral', GeralViewSet)
-
 urlpatterns = [
     path('', include(router.urls)),
-    path('teste', testeview),
     path('consulta_objetos', consulta_api),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls'))
