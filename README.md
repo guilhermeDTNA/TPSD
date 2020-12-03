@@ -48,7 +48,7 @@ sudo systemctl status docker
 
 Com o Docker instalado corretamente, vamos executar a API:
 
-Execute o comando: docker-compose up
+Execute o comando: COMPOSE_HTTP_TIMEOUT=200 docker-compose up
 
 Acesse localhost:8001
 
