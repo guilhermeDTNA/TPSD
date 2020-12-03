@@ -78,6 +78,7 @@ def consulta_api(request):
                                                    Geral__Agregacao__agregacao__contains=vetor_parametros[8],
                                                    Tecnico__formato__formato__contains = vetor_parametros[9],
                                                    Tecnico__tamanho__tamanho__contains = vetor_parametros[11],)
+                    
                     serializer = ApiOASerializer(members, many=True)
                     response = Response(serializer.data, content_type='application/json')
                     #response['Content-Disposition'] = 'attachment; filename=export.json'
